@@ -29,8 +29,7 @@ public class CtrlMain {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
-
+		CtrlMain  cm = new CtrlMain();
 	}
 
 }
