@@ -12,15 +12,19 @@ public class Dato {
 	
 	private Dato lC;
 	private int fila;
-	private int valor;
+	private Object valor;
 	private int columna;
 	private Dato LF;
 	
+	
+	public Dato(){
+		
+	}
 	/**
 	 * 
 	 * @param valor
 	 */
-	public Dato(int valor) {
+	public Dato(Object valor) {
 		this.valor = valor;
 		this.lC = null;
 		this.fila = 0;
@@ -59,14 +63,14 @@ public class Dato {
 	/**
 	 * @return the valor
 	 */
-	public int getValor() {
+	public Object getValor() {
 		return valor;
 	}
 
 	/**
 	 * @param valor the valor to set
 	 */
-	public void setValor(int valor) {
+	public void setValor(Object valor) {
 		this.valor = valor;
 	}
 

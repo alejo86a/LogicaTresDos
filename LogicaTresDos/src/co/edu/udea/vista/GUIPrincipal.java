@@ -55,8 +55,8 @@ public class GUIPrincipal extends JFrame{
 	private JButton lblFlechaizquierda;
 	private JButton lblFlechaderecha;
 	
-	private JLabel [] matrizLblsUno;
-	private JLabel [] matrizLblsDos;
+	private JLabel [][] matrizLblsUno;
+	private JLabel [][] matrizLblsDos;
 	
 	private JLabel lblUnoxuno;
 	private JLabel lblUnoyuno;
@@ -256,7 +256,7 @@ public class GUIPrincipal extends JFrame{
 		
 		matIzq.add(lblLineauno);
 		
-		matrizLblsUno = new JLabel[12];
+		matrizLblsUno = new JLabel[4][3];
 		
 		lblUnoxuno = new JLabel("");
 		lblUnoxuno.setBounds(10, 25, 46, 14);
@@ -321,7 +321,7 @@ public class GUIPrincipal extends JFrame{
 		lblDosxuno.setBounds(10, 25, 46, 14);
 		matDer.add(lblDosxuno);
 		
-		matrizLblsDos = new JLabel [12];
+		matrizLblsDos = new JLabel [14][3];
 		
 		lblDosyuno = new JLabel("");
 		lblDosyuno.setBounds(80, 25, 46, 14);
@@ -412,32 +412,32 @@ public class GUIPrincipal extends JFrame{
     }
     
     private void iniMatrizJlblsUno() {
-    	matrizLblsUno[0]=lblUnoxuno;
-    	matrizLblsUno[1]=lblUnoyuno;
-    	matrizLblsUno[2]=lblUnozuno;
-    	matrizLblsUno[3]=lblUnoduno;
-    	matrizLblsUno[4]=lblUnoxdos;
-    	matrizLblsUno[5]=lblUnoydos;
-    	matrizLblsUno[6]=lblUnozdos;
-    	matrizLblsUno[7]=lblUnoddos;
-    	matrizLblsUno[8]=lblUnoxtres;
-    	matrizLblsUno[9]=lblUnoytres;
-    	matrizLblsUno[10]=lblUnoztres;
-    	matrizLblsUno[11]=lblUnodtres;		
+    	matrizLblsUno[0][0]=lblUnoxuno;
+    	matrizLblsUno[1][0]=lblUnoyuno;
+    	matrizLblsUno[2][0]=lblUnozuno;
+    	matrizLblsUno[3][0]=lblUnoduno;
+    	matrizLblsUno[0][1]=lblUnoxdos;
+    	matrizLblsUno[1][1]=lblUnoydos;
+    	matrizLblsUno[2][1]=lblUnozdos;
+    	matrizLblsUno[3][1]=lblUnoddos;
+    	matrizLblsUno[0][2]=lblUnoxtres;
+    	matrizLblsUno[1][2]=lblUnoytres;
+    	matrizLblsUno[2][2]=lblUnoztres;
+    	matrizLblsUno[3][2]=lblUnodtres;		
 	}
     
     private void iniMatrizJlblsDos(){
-    	matrizLblsDos[0]=lblDosxuno;
-    	matrizLblsDos[1]=lblDosyuno;
-    	matrizLblsDos[2]=lblDoszuno;
-    	matrizLblsDos[3]=lblDosduno;
-    	matrizLblsDos[4]=lblDosxdos;
-    	matrizLblsDos[5]=lblDosydos;
-    	matrizLblsDos[6]=lblDoszdos;
-    	matrizLblsDos[7]=lblDosddos;
-    	matrizLblsDos[8]=lblDosxtres;
-    	matrizLblsDos[9]=lblDosytres;
-    	matrizLblsDos[10]=lblDosztres;
-    	matrizLblsDos[11]=lblDosdtres;
+    	matrizLblsDos[0][0]=lblDosxuno;
+    	matrizLblsDos[1][0]=lblDosyuno;
+    	matrizLblsDos[2][0]=lblDoszuno;
+    	matrizLblsDos[3][0]=lblDosduno;
+    	matrizLblsDos[0][1]=lblDosxdos;
+    	matrizLblsDos[1][1]=lblDosydos;
+    	matrizLblsDos[2][1]=lblDoszdos;
+    	matrizLblsDos[3][1]=lblDosddos;
+    	matrizLblsDos[0][2]=lblDosxtres;
+    	matrizLblsDos[1][2]=lblDosytres;
+    	matrizLblsDos[2][2]=lblDosztres;
+    	matrizLblsDos[3][2]=lblDosdtres;
     }
 }
