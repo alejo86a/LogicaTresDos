@@ -256,7 +256,7 @@ public class GUIPrincipal extends JFrame{
 		
 		matIzq.add(lblLineauno);
 		
-		matrizLblsUno = new JLabel[4][3];
+		matrizLblsUno = new JLabel[3][4];
 		
 		lblUnoxuno = new JLabel("");
 		lblUnoxuno.setBounds(10, 25, 46, 14);
@@ -321,7 +321,7 @@ public class GUIPrincipal extends JFrame{
 		lblDosxuno.setBounds(10, 25, 46, 14);
 		matDer.add(lblDosxuno);
 		
-		matrizLblsDos = new JLabel [14][3];
+		matrizLblsDos = new JLabel [3][4];
 		
 		lblDosyuno = new JLabel("");
 		lblDosyuno.setBounds(80, 25, 46, 14);
@@ -413,31 +413,31 @@ public class GUIPrincipal extends JFrame{
     
     private void iniMatrizJlblsUno() {
     	matrizLblsUno[0][0]=lblUnoxuno;
-    	matrizLblsUno[1][0]=lblUnoyuno;
-    	matrizLblsUno[2][0]=lblUnozuno;
-    	matrizLblsUno[3][0]=lblUnoduno;
-    	matrizLblsUno[0][1]=lblUnoxdos;
+    	matrizLblsUno[0][1]=lblUnoyuno;
+    	matrizLblsUno[0][2]=lblUnozuno;
+    	matrizLblsUno[0][3]=lblUnoduno;
+    	matrizLblsUno[1][0]=lblUnoxdos;
     	matrizLblsUno[1][1]=lblUnoydos;
-    	matrizLblsUno[2][1]=lblUnozdos;
-    	matrizLblsUno[3][1]=lblUnoddos;
-    	matrizLblsUno[0][2]=lblUnoxtres;
-    	matrizLblsUno[1][2]=lblUnoytres;
+    	matrizLblsUno[1][2]=lblUnozdos;
+    	matrizLblsUno[1][3]=lblUnoddos;
+    	matrizLblsUno[2][0]=lblUnoxtres;
+    	matrizLblsUno[2][1]=lblUnoytres;
     	matrizLblsUno[2][2]=lblUnoztres;
-    	matrizLblsUno[3][2]=lblUnodtres;		
+    	matrizLblsUno[2][3]=lblUnodtres;		
 	}
     
     private void iniMatrizJlblsDos(){
     	matrizLblsDos[0][0]=lblDosxuno;
-    	matrizLblsDos[1][0]=lblDosyuno;
-    	matrizLblsDos[2][0]=lblDoszuno;
-    	matrizLblsDos[3][0]=lblDosduno;
-    	matrizLblsDos[0][1]=lblDosxdos;
+    	matrizLblsDos[0][1]=lblDosyuno;
+    	matrizLblsDos[0][2]=lblDoszuno;
+    	matrizLblsDos[0][3]=lblDosduno;
+    	matrizLblsDos[1][0]=lblDosxdos;
     	matrizLblsDos[1][1]=lblDosydos;
-    	matrizLblsDos[2][1]=lblDoszdos;
-    	matrizLblsDos[3][1]=lblDosddos;
-    	matrizLblsDos[0][2]=lblDosxtres;
-    	matrizLblsDos[1][2]=lblDosytres;
+    	matrizLblsDos[1][2]=lblDoszdos;
+    	matrizLblsDos[1][3]=lblDosddos;
+    	matrizLblsDos[2][0]=lblDosxtres;
+    	matrizLblsDos[2][1]=lblDosytres;
     	matrizLblsDos[2][2]=lblDosztres;
-    	matrizLblsDos[3][2]=lblDosdtres;
+    	matrizLblsDos[2][3]=lblDosdtres;
     }
 }

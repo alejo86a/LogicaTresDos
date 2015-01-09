@@ -63,7 +63,7 @@ public class Matriz {
 				ultimos[c].setlC(x);
 				ultimos[c] = x;
 								
-				matriz[f][c] = 0;
+				matriz[f][c] = -1;
 				
 				if(c == 3){
 					c = 0;
@@ -93,7 +93,7 @@ private String buscarValor(int a, int b, int[][] matriz) {
 	for (i = a; i < 3; i++) {
 		for (j = b; j < 4; j++) {
 			
-			if(matriz[i][j] !=  0){
+			if(matriz[i][j] !=  -1){
 				
 				return String.valueOf(i)+"-"+String.valueOf(j);
 			}
@@ -104,17 +104,17 @@ private String buscarValor(int a, int b, int[][] matriz) {
 	}
 
 private int contarElemntos(int[][] matriz) {
-		int contador = 0;
-		for (int i = 0; i < 3; i++) {
-			for (int j = 0; j < 4; j++) {
-				if(matriz[i][j] !=  0){
-					contador++;
-				}
-				
-			}
-		}
-		System.out.println(contador);
-		return contador;
+//		int contador = 0;
+//		for (int i = 0; i < 3; i++) {
+//			for (int j = 0; j < 4; j++) {
+//				if(matriz[i][j] !=  0){
+//					contador++;
+//				}
+//				
+//			}
+//		}
+//		System.out.println(contador);
+		return 12;
 	}
 
 //	public void llenarMatriz(int[][] matriz){
@@ -177,6 +177,39 @@ private int contarElemntos(int[][] matriz) {
 		}
 	}
 	
+	
+	public void metodoGauss(){
+		Dato p = (Dato)Mat.getValor();
+		Dato q = p.getLF();;
+		if((int)q.getValor() == 0 ){
+			
+			if(  (int) ( (Dato)p.getValor() ).getLF().getValor() != 0){
+				intercambiarFilas(p);
+			}
+			
+			
+		}
+		
+		
+		
+		
+		while (p!=Mat){
+			q=p.getLF();
+			while(q!=p){
+				if(q.getValor() instanceof Integer){
+					System.out.println(q.getFila()+" "+q.getColumna()+" "+(int)q.getValor());
+				}
+				q=q.getLF();
+			}
+			p=(Dato) p.getValor();
+		}
+	}
+	
+	private void intercambiarFilas(Dato p) {
+		
+		
+	}
+
 	public static void main(String[] args){
 		Matriz m = new Matriz();
 		int [][] d = new int [3][4];
