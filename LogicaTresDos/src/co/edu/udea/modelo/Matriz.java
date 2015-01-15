@@ -180,34 +180,73 @@ private int contarElemntos(int[][] matriz) {
 	
 	public void metodoGauss(){
 		Dato p = (Dato)Mat.getValor();
-		Dato q = p.getLF();;
+		Dato q = p.getLF();
 		if((int)q.getValor() == 0 ){
 			
-			if(  (int) ( (Dato)p.getValor() ).getLF().getValor() != 0){
-				intercambiarFilas(p);
-			}
-			
-			
-		}
-		
-		
-		
-		
-		while (p!=Mat){
-			q=p.getLF();
-			while(q!=p){
-				if(q.getValor() instanceof Integer){
-					System.out.println(q.getFila()+" "+q.getColumna()+" "+(int)q.getValor());
+			if(  (int) ( (Dato)p.getValor() ).getLF().getValor() == 1 || (int) ( (Dato) ( (Dato)p.getValor() ).getValor() ).getLF().getValor() == 1){
+				if((int) ( (Dato)p.getValor() ).getLF().getValor() == 1){
+					intercambiarFilas(Mat, 1);
+				}else if((int) ( (Dato) ( (Dato)p.getValor() ).getValor() ).getLF().getValor() == 1){
+					intercambiarFilas(Mat, 2);
+				}				
+			}else{
+				if((int) ( (Dato)p.getValor() ).getLF().getValor() != 0){
+					intercambiarFilas(Mat, 1);
+				}else if((int) ( (Dato) ( (Dato)p.getValor() ).getValor() ).getLF().getValor() != 0){
+					intercambiarFilas(Mat, 2);
 				}
-				q=q.getLF();
-			}
-			p=(Dato) p.getValor();
+			}			
 		}
+		
+		
+		if((int)q.getValor() != 0 ){
+			while (p!=Mat){
+				q=p.getLF();
+				while(q!=p){
+					if(q.getValor() instanceof Integer){
+						System.out.println(q.getFila()+" "+q.getColumna()+" "+(int)q.getValor());
+					}
+					q=q.getLF();
+				}
+				p=(Dato) p.getValor();
+			}
+		}else{
+			//no tiene solucion
+		}
+		
+		
+		
 	}
 	
-	private void intercambiarFilas(Dato p) {
-		
-		
+	private void intercambiarFilas(Dato p, int saltos) {
+		if(saltos == 1){
+			//10
+			Dato auxPrimero = (Dato)p.getValor();
+			//20
+			Dato auxSegundo = (Dato)((Dato)p.getValor()).getValor();
+			//30
+			Dato auxUltimo = (Dato)((Dato) ((Dato)p.getValor()).getValor()).getValor();
+			
+			((Dato)((Dato)p.getValor()).getValor()).setValor(auxPrimero);
+			((Dato)p.getValor()).setValor(auxUltimo);
+			p.setValor(auxSegundo);
+			
+			
+		}else{
+			//10
+			Dato auxPrimero = (Dato)p.getValor();
+			//20
+			Dato auxSegundo = (Dato)((Dato)p.getValor()).getValor();
+			//30
+			Dato auxTercero = (Dato)((Dato) ((Dato)p.getValor()).getValor()).getValor();
+			//40
+			Dato auxUltimo = (Dato)((Dato)((Dato) ((Dato)p.getValor()).getValor()).getValor()).getValor();
+			
+			p.setValor(auxTercero);
+			auxTercero.setValor(auxSegundo);
+			auxSegundo.setValor(auxPrimero);
+			auxPrimero.setValor(auxUltimo);
+		}
 	}
 
 	public static void main(String[] args){
@@ -226,6 +265,8 @@ private int contarElemntos(int[][] matriz) {
 		d[2][2]=5;
 		d[2][3]=0;
 		m.llenarMatriz(d);
+		m.intercambiarFilas(m.Mat, 2);
+//		m.intercambiarFilas(((Dato) ((Dato) m.Mat.getValor()).getLF()));
 		m.imprimir();
 	}
 
